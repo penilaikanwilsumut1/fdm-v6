@@ -502,7 +502,7 @@ export default function App() {
     }));
     setFiles(prev => [...prev, ...newFiles]);
     setError(null);
-    setSuccess(`${selectedFiles.length} file berhasil dipilih`);
+    setSuccess(`${selectedFiles.length} File Siap untuk Diekstrak`);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -522,7 +522,7 @@ export default function App() {
 
   const handleExtract = useCallback(async () => {
     if (files.length === 0) {
-      setError('Silakan upload file FDM terlebih dahulu');
+      setError('Silakan Upload File FDM Terlebih Dulu');
       return;
     }
     setIsProcessing(true);
@@ -612,14 +612,14 @@ export default function App() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4 md:p-8 font-body">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading">Ekstraktor FDM V6</h1>
-            <p className="text-slate-600 font-body">Ekstrak data dari file FDM (.xlsm/.xlsx) ke format Excel</p>
+            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading">Ekstraktor Khusus File FDM V6 Sektor Perkebunan</h1>
+            <p className="text-slate-600 font-body">Website ini Menjamin Kerahasiaan Data yang Di-upload sebab Website ini Tidak Menyimpan File Apapun yang Di-upload dan Diekstrak</p>
           </div>
           <Card className="shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 font-heading">
                 <FileSpreadsheet className="w-5 h-5 text-blue-600" />
-                Upload File FDM
+                Upload File FDM Versi V6 Sektor Perkebunan
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -638,8 +638,8 @@ export default function App() {
                     <Upload className="w-8 h-8 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-slate-900 font-body">Klik untuk upload file</p>
-                    <p className="text-sm text-slate-500 font-body">atau drag and drop file FDM (.xlsm/.xlsx)</p>
+                    <p className="font-medium text-slate-900 font-body">Klik Di Sini untuk Upload File</p>
+                    <p className="text-sm text-slate-500 font-body">Pastikan File yang Di-upload adalah File FDM V6 Sektor Perkebunan dalam Format xlsm</p>
                   </div>
                   <p className="text-xs text-slate-400 font-body">Maksimal 50 file</p>
                 </label>
@@ -661,7 +661,7 @@ export default function App() {
                           <span className="truncate text-sm font-body">{fileItem.file.name}</span>
                         </div>
                         <div className="flex items-center gap-2 flex-shrink-0">
-                          {fileItem.status === 'pending' && <span className="text-xs text-slate-500 font-body">Menunggu</span>}
+                          {fileItem.status === 'pending' && <span className="text-xs text-slate-500 font-body">Menunggu untuk Diekstrak</span>}
                           {fileItem.status === 'processing' && <RefreshCw className="w-4 h-4 text-blue-600 animate-spin" />}
                           {fileItem.status === 'completed' && <CheckCircle className="w-4 h-4 text-green-600" />}
                           {fileItem.status === 'error' && <AlertCircle className="w-4 h-4 text-red-600" />}
@@ -690,7 +690,7 @@ export default function App() {
                   className="flex-1 bg-blue-600 hover:bg-blue-700 font-body"
                 >
                   <Play className="w-4 h-4 mr-2" />
-                  {isProcessing ? 'Memproses...' : 'Ekstrak Data'}
+                  {isProcessing ? 'Memproses...' : 'Ekstrak Sekarang'}
                 </Button>
                 {outputWorkbook && (
                   <Button onClick={handleDownload} variant="outline" className="flex-1 border-green-600 text-green-600 hover:bg-green-50 font-body">
@@ -714,7 +714,7 @@ export default function App() {
             </CardContent>
           </Card>
           <div className="text-center text-sm text-slate-500 font-body">
-            <p>Developed by: Tim Penilaian Wilayah Sumatera Utara 1</p>
+            <p>Saran/Masukan: 0822-9411-6001 (Dedek)</p>
             <p className="mt-1">Versi 6.0 - 2026</p>
           </div>
         </div>
