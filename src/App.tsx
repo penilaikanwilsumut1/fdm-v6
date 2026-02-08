@@ -302,7 +302,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `ROUND(((${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}+${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow})/${colMap["Areal Produktif"]}${excelRow}),0)*${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$14)`, t: 'n' };
     
     // Formula: Areal Tidak Produktif (Copy)
     ws1[`${colMap["Areal Tidak Produktif (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Tidak Produktif"]}${excelRow}`, t: 'n' };
@@ -311,7 +311,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Tidak Produktif (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Tidak Produktif"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$14)`, t: 'n' };
     
     // Formula: Areal Pengaman (Copy)
     ws1[`${colMap["Areal Pengaman (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Pengaman"]}${excelRow}`, t: 'n' };
@@ -320,7 +320,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Pengaman (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Pengaman"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$14)`, t: 'n' };
     
     // Formula: Areal Emplasemen (Copy)
     ws1[`${colMap["Areal Emplasemen (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Emplasemen"]}${excelRow}`, t: 'n' };
@@ -329,7 +329,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Emplasemen (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Emplasemen"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$14)`, t: 'n' };
     
     // Formula: JUMLAH Luas (m2) pada A. DATA BUMI
     ws1[`${colMap["JUMLAH Luas (m2) pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["LUAS BUMI"]}${excelRow}`, t: 'n' };
@@ -387,38 +387,108 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
   XLSX.utils.book_append_sheet(wb, ws1, "1. Hasil");
   
   // Sheet 2: Kesimpulan
-  const ws2Data: (string | number | { f: string; t: 'n' | 's' })[][] = [
-    ["Poin", "Keterangan (BIT + 10.3% dan NDT Tetap)", "Nilai", "Keterangan", "Skenario Kenaikan BIT"],
-    ["", "", "", "", 0.103],
-    ["Simulasi Penerimaan PBB 2026", "Perkebunan", { f: "SUMIF('1. Hasil'!C2:C10000,\"Perkebunan\",'1. Hasil'!AY2:AY10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026", "Minerba", { f: "SUMIF('1. Hasil'!C2:C10000,\"Minerba\",'1. Hasil'!AY2:AY10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026", "Perhutanan (HTI)", { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (HTI)\",'1. Hasil'!AY2:AY10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026", "Perhutanan (Hutan Alam)", { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (Hutan Alam)\",'1. Hasil'!AY2:AY10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026", "Sektor Lainnya", { f: "SUMIF('1. Hasil'!C2:C10000,\"Sektor Lainnya\",'1. Hasil'!AY2:AY10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026 (Collection Rate 100%)", "=(COUNT('1. Hasil'!A2:A10000))&\" NOP\"", { f: "SUM(C3:C7)", t: 'n' }, "", ""],
-    ["Target Penerimaan PBB 2026", "", 110289165592, "", ""],
-    ["Selisih antara Simulasi (Collection Rate 100%) & Target", "", { f: "C8-C9", t: 'n' }, { f: 'IF(C10>0,"Tercapai","Tidak Tercapai")', t: 's' }, ""],
-    [{ f: '="Simulasi Penerimaan PBB 2026 (Collection Rate "&B11*100&"%)"', t: 's' }, 0.95, { f: "C8*B11", t: 'n' }, "", ""],
-    [{ f: '="Selisih antara Simulasi (Collection Rate "&B11*100&"%)"&" Target"', t: 's' }, "", { f: "C11-C9", t: 'n' }, { f: 'IF(C12>0,"Tercapai","Tidak Tercapai")', t: 's' }, ""],
-    ["", "", "", "", ""],
-    ["Poin", "Keterangan (BIT + 10.3% dan NDT + 46%)", "Nilai", "Keterangan", "Skenario Kenaikan NDT"],
-    ["Simulasi Penerimaan PBB 2026", "Perkebunan", { f: "SUMIF('1. Hasil'!C2:C10000,\"Perkebunan\",'1. Hasil'!BC2:BC10000)", t: 'n' }, "", 0.46],
-    ["Simulasi Penerimaan PBB 2026", "Minerba", { f: "SUMIF('1. Hasil'!C2:C10000,\"Minerba\",'1. Hasil'!BC2:BC10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026", "Perhutanan (HTI)", { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (HTI)\",'1. Hasil'!BC2:BC10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026", "Perhutanan (Hutan Alam)", { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (Hutan Alam)\",'1. Hasil'!BC2:BC10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026", "Sektor Lainnya", { f: "SUMIF('1. Hasil'!C2:C10000,\"Sektor Lainnya\",'1. Hasil'!BC2:BC10000)", t: 'n' }, "", ""],
-    ["Simulasi Penerimaan PBB 2026 (Collection Rate 100%)", "=(COUNT('1. Hasil'!A2:A10000))&\" NOP\"", { f: "SUM(C15:C19)", t: 'n' }, "", ""],
-    ["Target Penerimaan PBB 2026", "", { f: "C9", t: 'n' }, "", ""],
-    ["Selisih antara Simulasi (Collection Rate 100%) & Target", "", { f: "C20-C21", t: 'n' }, { f: 'IF(C22>0,"Tercapai","Tidak Tercapai")', t: 's' }, ""],
-    [{ f: '="Simulasi Penerimaan PBB 2026 (Collection Rate "&B23*100&"%)"', t: 's' }, 0.95, { f: "C20*B23", t: 'n' }, "", ""],
-    [{ f: '="Selisih antara Simulasi (Collection Rate "&B23*100&"%)"&" Target"', t: 's' }, "", { f: "C23-C21", t: 'n' }, { f: 'IF(C24>0,"Tercapai","Tidak Tercapai")', t: 's' }, ""],
+  const kesimpulanData = [
+    { cell: "E1", value: "Skenario Kenaikan BIT" },
+    { cell: "E2", value: 0.103 },
+    { cell: "A1", value: "Poin" },
+    // B1: Dynamic formula (same as Python)
+    { cell: "B1", value: { f: '"Keterangan (BIT + "&E2*100&"% dan NDT Tetap)"' } },
+    { cell: "C1", value: "Nilai" },
+    { cell: "D1", value: "Keterangan" },
+    
+    { cell: "A2", value: "Simulasi Penerimaan PBB 2026" },
+    { cell: "B2", value: "Perkebunan" },
+    { cell: "C2", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Perkebunan\",'1. Hasil'!AY2:AY10000)" } },
+    { cell: "A3", value: "Simulasi Penerimaan PBB 2026" },
+    { cell: "B3", value: "Minerba" },
+    { cell: "C3", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Minerba\",'1. Hasil'!AY2:AY10000)" } },
+    { cell: "A4", value: "Simulasi Penerimaan PBB 2026" },
+    { cell: "B4", value: "Perhutanan (HTI)" },
+    { cell: "C4", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (HTI)\",'1. Hasil'!AY2:AY10000)" } },
+    { cell: "A5", value: "Simulasi Penerimaan PBB 2026" },
+    { cell: "B5", value: "Perhutanan (Hutan Alam)" },
+    { cell: "C5", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (Hutan Alam)\",'1. Hasil'!AY2:AY10000)" } },
+    { cell: "A6", value: "Simulasi Penerimaan PBB 2026" },
+    { cell: "B6", value: "Sektor Lainnya" },
+    { cell: "C6", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Sektor Lainnya\",'1. Hasil'!AY2:AY10000)" } },
+    
+    { cell: "A7", value: "Simulasi Penerimaan PBB 2026 (Collection Rate 100%)" },
+    { cell: "B7", value: { f: '(COUNT(\'1. Hasil\'!A2:A10000))&" NOP"' } },
+    { cell: "C7", value: { f: "SUM(C2:C6)" } },
+    { cell: "A8", value: "Target Penerimaan PBB 2026" },
+    { cell: "C8", value: 110289165592 },
+    { cell: "A9", value: "Selisih antara Simulasi (Collection Rate 100%) & Target" },
+    { cell: "C9", value: { f: "C7-C8" } },
+    { cell: "D9", value: { f: 'IF(C9>0,"Tercapai","Tidak Tercapai")' } },
+    
+    // A10: Dynamic formula (same as Python)
+    { cell: "A10", value: { f: '"Simulasi Penerimaan PBB 2026 (Collection Rate "&B10*100&"%)"' } },
+    { cell: "B10", value: 0.95 },
+    { cell: "C10", value: { f: "C7*B10" } },
+    // A11: Dynamic formula (same as Python)
+    { cell: "A11", value: { f: '"Selisih antara Simulasi (Collection Rate "&B10*100&"%)"&" Target"' } },
+    { cell: "C11", value: { f: "C10-C8" } },
+    { cell: "D11", value: { f: 'IF(C11>0,"Tercapai","Tidak Tercapai")' } },
+    
+    { cell: "A13", value: "Poin" },
+    // B13: Dynamic formula (same as Python)
+    { cell: "B13", value: { f: '"Keterangan (BIT + "&E2*100&"% dan NDT + "&E14*100&"%)"' } },
+    { cell: "C13", value: "Nilai" },
+    { cell: "D13", value: "Keterangan" },
+    { cell: "E13", value: "Skenario Kenaikan NDT" },
+    
+    { cell: "A14", value: { f: "=A2" } },
+    { cell: "B14", value: { f: "=B2" } },
+    { cell: "C14", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Perkebunan\",'1. Hasil'!BC2:BC10000)" } },
+    { cell: "E14", value: 0.46 },
+    { cell: "A15", value: { f: "=A3" } },
+    { cell: "B15", value: { f: "=B3" } },
+    { cell: "C15", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Minerba\",'1. Hasil'!BC2:BC10000)" } },
+    { cell: "A16", value: { f: "=A4" } },
+    { cell: "B16", value: { f: "=B4" } },
+    { cell: "C16", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (HTI)\",'1. Hasil'!BC2:BC10000)" } },
+    { cell: "A17", value: { f: "=A5" } },
+    { cell: "B17", value: { f: "=B5" } },
+    { cell: "C17", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Perhutanan (Hutan Alam)\",'1. Hasil'!BC2:BC10000)" } },
+    { cell: "A18", value: { f: "=A6" } },
+    { cell: "B18", value: { f: "=B6" } },
+    { cell: "C18", value: { f: "SUMIF('1. Hasil'!C2:C10000,\"Sektor Lainnya\",'1. Hasil'!BC2:BC10000)" } },
+    
+    { cell: "A19", value: { f: "=A7" } },
+    { cell: "B19", value: { f: "=B7" } },
+    { cell: "C19", value: { f: "SUM(C14:C18)" } },
+    { cell: "A20", value: { f: "=A8" } },
+    { cell: "C20", value: { f: "=C8" } },
+    { cell: "A21", value: { f: "=A9" } },
+    { cell: "C21", value: { f: "C19-C20" } },
+    { cell: "D21", value: { f: 'IF(C21>0,"Tercapai","Tidak Tercapai")' } },
+    
+    // A22: Dynamic formula (same as Python)
+    { cell: "A22", value: { f: '"Simulasi Penerimaan PBB 2026 (Collection Rate "&B22*100&"%)"' } },
+    { cell: "B22", value: 0.95 },
+    { cell: "C22", value: { f: "C19*B22" } },
+    // A23: Dynamic formula (same as Python)
+    { cell: "A23", value: { f: '"Selisih antara Simulasi (Collection Rate "&B22*100&"%)"&" Target"' } },
+    { cell: "C23", value: { f: "C22-C20" } },
+    { cell: "D23", value: { f: 'IF(C23>0,"Tercapai","Tidak Tercapai")' } }
   ];
-  
-  const ws2 = XLSX.utils.aoa_to_sheet(ws2Data);
-  ws2['!cols'] = [{ wch: 60 }, { wch: 30 }, { wch: 25 }, { wch: 20 }, { wch: 20 }];
-  
+
+  for (const item of kesimpulanData) {
+    const addr = item.cell as string;
+    if (typeof item.value === 'object' && item.value.f) {
+      ws2[addr] = { f: item.value.f, t: 'n' };
+    } else if (typeof item.value === 'number') {
+      ws2[addr] = { v: item.value, t: 'n' };
+    } else {
+      ws2[addr] = { v: item.value, t: 's' };
+    }
+  }
+
+  // Set range for sheet 2
+  ws2['!ref'] = 'A1:E23';
+
   XLSX.utils.book_append_sheet(wb, ws2, "2. Kesimpulan");
-  
+
   return wb;
 }
 
