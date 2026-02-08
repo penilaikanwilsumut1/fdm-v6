@@ -651,7 +651,7 @@ export default function App() {
           </CardContent>
         </Card>
         <div className="text-center text-sm text-slate-500">
-          <p>Developed by: Tim Penilaian Wilayah Sumatera Utara 1</p>
+          <p>Developed by: Penilai Kantor Wilayah Sumatera Utara I</p>
           <p className="mt-1">Versi 6.0 - 2026</p>
         </div>
       </div>
