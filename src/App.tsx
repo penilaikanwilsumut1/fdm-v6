@@ -302,7 +302,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `ROUND(((${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}+${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow})/${colMap["Areal Produktif"]}${excelRow}),0)*${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E15)`, t: 'n' };
     
     // Formula: Areal Tidak Produktif (Copy)
     ws1[`${colMap["Areal Tidak Produktif (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Tidak Produktif"]}${excelRow}`, t: 'n' };
@@ -311,7 +311,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Tidak Produktif (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Tidak Produktif"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E15)`, t: 'n' };
     
     // Formula: Areal Pengaman (Copy)
     ws1[`${colMap["Areal Pengaman (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Pengaman"]}${excelRow}`, t: 'n' };
@@ -320,7 +320,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Pengaman (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Pengaman"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E15)`, t: 'n' };
     
     // Formula: Areal Emplasemen (Copy)
     ws1[`${colMap["Areal Emplasemen (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Emplasemen"]}${excelRow}`, t: 'n' };
@@ -329,7 +329,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Emplasemen (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Emplasemen"]}${excelRow}`, t: 'n' };
     
     // Formula: NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E15)`, t: 'n' };
     
     // Formula: JUMLAH Luas (m2) pada A. DATA BUMI
     ws1[`${colMap["JUMLAH Luas (m2) pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["LUAS BUMI"]}${excelRow}`, t: 'n' };
