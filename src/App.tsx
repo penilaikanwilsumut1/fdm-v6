@@ -834,7 +834,7 @@ export default function App() {
               <h4 className="font-semibold text-blue-800 mb-2">Informasi Privasi</h4>
               <ul className="text-sm text-blue-700 space-y-1">
                 <li>✓ File yang diupload tidak disimpan di server</li>
-                <li>✓ Semua proses ekstraksi dilakukan di browser Anda</li>
+                <li>✓ Semua proses ekstraksi dilakukan di browser</li>
                 <li>✓ Hasil ekstraksi hanya tersedia untuk didownload</li>
                 <li>✓ Data tidak akan tertinggal setelah Anda menutup halaman ini</li>
               </ul>
