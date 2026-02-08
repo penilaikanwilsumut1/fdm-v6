@@ -267,7 +267,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}`] = { f: `${colMap["Areal Produktif"]}${excelRow}*${colMap["NJOP/M Areal Belum Produktif"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)
-    ws1[`${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow}`] = { f: `${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}+(${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}*'2. Kesimpulan'!E2)`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow}`] = { f: `${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}+(${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}*'2. Kesimpulan'!$E$2)`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP Bumi Areal Produktif (Rp)
     ws1[`${colMap["NJOP Bumi Areal Produktif (Rp)"]}${excelRow}`] = { f: `${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}+${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}`, t: 'n', z: '#,##0' };
@@ -285,7 +285,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `ROUND((${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}+${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow})/${colMap["Areal Produktif"]}${excelRow},0)*${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$15)`, t: 'n', z: '#,##0' };
 
     // Formula: Areal Tidak Produktif (Copy)
     ws1[`${colMap["Areal Tidak Produktif (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Tidak Produktif"]}${excelRow}`, t: 'n', z: '#,##0' };
@@ -294,7 +294,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Tidak Produktif (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Tidak Produktif"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$15)`, t: 'n', z: '#,##0' };
 
     // Formula: Areal Pengaman (Copy)
     ws1[`${colMap["Areal Pengaman (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Pengaman"]}${excelRow}`, t: 'n', z: '#,##0' };
@@ -303,7 +303,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Pengaman (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Pengaman"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$15)`, t: 'n', z: '#,##0' };
 
     // Formula: Areal Emplasemen (Copy)
     ws1[`${colMap["Areal Emplasemen (Copy)"]}${excelRow}`] = { f: `${colMap["Areal Emplasemen"]}${excelRow}`, t: 'n', z: '#,##0' };
@@ -312,7 +312,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Areal Emplasemen (Copy)"]}${excelRow}*${colMap["NJOP/M Areal Emplasemen"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!E14)`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$15)`, t: 'n', z: '#,##0' };
 
     // Formula: JUMLAH Luas (m2) pada A. DATA BUMI
     ws1[`${colMap["JUMLAH Luas (m2) pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["LUAS BUMI"]}${excelRow}`, t: 'n', z: '#,##0' };
@@ -382,15 +382,15 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
   // These formulas reference sheet "2. Kesimpulan" for dynamic percentage values
   const headerFormulas: { [key: string]: string } = {
     'V1': '="NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT "&\'2. Kesimpulan\'!$E$2*100&"%)"',
-    'AA1': '="NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$14*100&"%)"',
-    'AC1': '="NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$14*100&"%)"',
-    'AG1': '="NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$14*100&"%)"',
-    'AK1': '="NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$14*100&"%)"',
-    'AO1': '="NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$14*100&"%)"',
+    'AA1': '="NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$15*100&"%)"',
+    'AC1': '="NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$15*100&"%)"',
+    'AG1': '="NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$15*100&"%)"',
+    'AK1': '="NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$15*100&"%)"',
+    'AO1': '="NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik "&\'2. Kesimpulan\'!$E$15*100&"%)"',
     'AX1': '="SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT "&\'2. Kesimpulan\'!$E$2*100&"% dan NDT Tetap)"',
     'AY1': '="SIMULASI SPPT 2026 (Hanya Kenaikan BIT "&\'2. Kesimpulan\'!$E$2*100&"% dan NDT Tetap)"',
-    'BB1': '="SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Kenaikan BIT "&\'2. Kesimpulan\'!$E$2*100&"% + NDT "&\'2. Kesimpulan\'!$E$14*100&"%)"',
-    'BC1': '="SIMULASI SPPT 2026 (Kenaikan BIT "&\'2. Kesimpulan\'!$E$2*100&"% + NDT "&\'2. Kesimpulan\'!$E$14*100&"%)"'
+    'BB1': '="SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Kenaikan BIT "&\'2. Kesimpulan\'!$E$2*100&"% + NDT "&\'2. Kesimpulan\'!$E$15*100&"%)"',
+    'BC1': '="SIMULASI SPPT 2026 (Kenaikan BIT "&\'2. Kesimpulan\'!$E$2*100&"% + NDT "&\'2. Kesimpulan\'!$E$15*100&"%)"'
   };
 
   for (const [cellAddr, formula] of Object.entries(headerFormulas)) {
