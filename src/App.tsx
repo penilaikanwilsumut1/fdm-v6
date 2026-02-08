@@ -381,6 +381,64 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["SIMULASI SPPT 2026 (Kenaikan BIT 10,3% + NDT 46%)"]}${excelRow}`] = { f: `((${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Kenaikan BIT 10,3% + NDT 46%)"]}${excelRow}-12000000)*40%)*0.5%`, t: 'n' };
   }
   
+  // Apply number format to columns J through BC (index 9 to 54) for data rows
+  // Format: #,##0 (Comma style with no decimals)
+  const startColIndex = 9; // Column J (0-indexed)
+  const endColIndex = 54;  // Column BC (0-indexed)
+  
+  for (let colIdx = startColIndex; colIdx <= endColIndex; colIdx++) {
+    const colLetter = getColumnLetter(colIdx);
+    for (let rowIdx = 2; rowIdx <= allData.length + 1; rowIdx++) {
+      const cellAddr = `${colLetter}${rowIdx}`;
+      if (ws1[cellAddr]) {
+        if (!ws1[cellAddr].z) {
+          ws1[cellAddr].z = '#,##0';
+        }
+      }
+    }
+  }
+  
+  // Add dynamic header formulas for specific cells in row 1
+  // V1 (column index 21): NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)
+  const v1Col = getColumnLetter(21);
+  ws1[`${v1Col}1`] = { f: `="NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT "&'2. Kesimpulan'!$E$2*100&"%)\"`, t: 's' };
+  
+  // AA1 (column index 26): NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
+  const aa1Col = getColumnLetter(26);
+  ws1[`${aa1Col}1`] = { f: `="NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&'2. Kesimpulan'!$E$14*100&"%)\"`, t: 's' };
+  
+  // AC1 (column index 28): NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
+  const ac1Col = getColumnLetter(28);
+  ws1[`${ac1Col}1`] = { f: `="NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&'2. Kesimpulan'!$E$14*100&"%)\"`, t: 's' };
+  
+  // AG1 (column index 32): NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
+  const ag1Col = getColumnLetter(32);
+  ws1[`${ag1Col}1`] = { f: `="NJOP BUMI (Rp) AREAL TIDAK PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik "&'2. Kesimpulan'!$E$14*100&"%)\"`, t: 's' };
+  
+  // AK1 (column index 36): NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
+  const ak1Col = getColumnLetter(36);
+  ws1[`${ak1Col}1`] = { f: `="NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI (Proyeksi NDT Naik "&'2. Kesimpulan'!$E$14*100&"%)\"`, t: 's' };
+  
+  // AO1 (column index 40): NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik 46%)
+  const ao1Col = getColumnLetter(40);
+  ws1[`${ao1Col}1`] = { f: `="NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI (Proyeksi NDT Naik "&'2. Kesimpulan'!$E$14*100&"%)\"`, t: 's' };
+  
+  // AX1 (column index 49): SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)
+  const ax1Col = getColumnLetter(49);
+  ws1[`${ax1Col}1`] = { f: `="SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT "&'2. Kesimpulan'!$E$2*100&"% dan NDT Tetap)\"`, t: 's' };
+  
+  // AY1 (column index 50): SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)
+  const ay1Col = getColumnLetter(50);
+  ws1[`${ay1Col}1`] = { f: `="SIMULASI SPPT 2026 (Hanya Kenaikan BIT "&'2. Kesimpulan'!$E$2*100&"% dan NDT Tetap)\"`, t: 's' };
+  
+  // BB1 (column index 53): SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Kenaikan BIT 10,3% + NDT 46%)
+  const bb1Col = getColumnLetter(53);
+  ws1[`${bb1Col}1`] = { f: `="SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Kenaikan BIT "&'2. Kesimpulan'!$E$2*100&"% + NDT "&'2. Kesimpulan'!$E$14*100&"%)\"`, t: 's' };
+  
+  // BC1 (column index 54): SIMULASI SPPT 2026 (Kenaikan BIT 10,3% + NDT 46%)
+  const bc1Col = getColumnLetter(54);
+  ws1[`${bc1Col}1`] = { f: `="SIMULASI SPPT 2026 (Kenaikan BIT "&'2. Kesimpulan'!$E$2*100&"% + NDT "&'2. Kesimpulan'!$E$14*100&"%)\"`, t: 's' };
+  
   // Set column widths for better readability
   ws1['!cols'] = headers.map(() => ({ wch: 25 }));
   
