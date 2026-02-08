@@ -267,7 +267,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}`] = { f: `${colMap["Areal Produktif"]}${excelRow}*${colMap["NJOP/M Areal Belum Produktif"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)
-    ws1[`${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow}`] = { f: `${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}+(${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}*'2. Kesimpulan'!E2)`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow}`] = { f: `${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}+(${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}*'2. Kesimpulan'!$E$2)`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP Bumi Areal Produktif (Rp)
     ws1[`${colMap["NJOP Bumi Areal Produktif (Rp)"]}${excelRow}`] = { f: `${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}+${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp)"]}${excelRow}`, t: 'n', z: '#,##0' };
