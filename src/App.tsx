@@ -612,8 +612,8 @@ export default function App() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4 md:p-8 font-body">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading">Ekstraktor Khusus File FDM V6 Sektor Perkebunan</h1>
-            <p className="text-slate-600 font-body">Website ini Menjamin Kerahasiaan Data yang Di-upload sebab Website ini Tidak Menyimpan File Apapun yang Di-upload dan Diekstrak</p>
+            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading">Ekstraktor FDM V6 Sektor Perkebunan</h1>
+            <p className="text-slate-600 font-body">Website ini Tidak Menyimpan File Apapun yang Di-upload dan Diekstrak</p>
           </div>
           <Card className="shadow-lg">
             <CardHeader>
@@ -639,7 +639,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="font-medium text-slate-900 font-body">Klik Di Sini untuk Upload File</p>
-                    <p className="text-sm text-slate-500 font-body">Pastikan File yang Di-upload adalah File FDM V6 Sektor Perkebunan dalam Format xlsm</p>
+                    <p className="text-sm text-slate-500 font-body">Pastikan File berupa FDM V6 Sektor Perkebunan dalam Format xlsm</p>
                   </div>
                   <p className="text-xs text-slate-400 font-body">Maksimal 50 file</p>
                 </label>
@@ -715,7 +715,7 @@ export default function App() {
           </Card>
           <div className="text-center text-sm text-slate-500 font-body">
             <p>Saran/Masukan: 0822-9411-6001 (Dedek)</p>
-            <p className="mt-1">Versi 6.0 - 2026</p>
+            <p className="mt-1">Update: 8 Februari 2026</p>
           </div>
         </div>
       </div>
