@@ -276,13 +276,13 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow}`] = { f: `${colMap["Areal Produktif"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP Bumi Per M2 Areal Produktif (Rp/m2)
-    ws1[`${colMap["NJOP Bumi Per M2 Areal Produktif (Rp/m2)"]}${excelRow}`] = { f: `${colMap["NJOP Bumi Areal Produktif (Rp)"]}${excelRow}/${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow}`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP Bumi Per M2 Areal Produktif (Rp/m2)"]}${excelRow}`] = { f: `IFERROR(${colMap["NJOP Bumi Areal Produktif (Rp)"]}${excelRow}/${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow},0)`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI
     ws1[`${colMap["NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI"]}${excelRow}`] = { f: `${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow}*${colMap["NJOP Bumi Per M2 Areal Produktif (Rp/m2)"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
-    ws1[`${colMap["NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `ROUND((${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}+${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow})/${colMap["Areal Produktif"]}${excelRow},0)*${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow}`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `IFERROR(ROUND((${colMap["NJOP Bumi Berupa Tanah (Rp)"]}${excelRow}+${colMap["NJOP Bumi Berupa Pengembangan Tanah (Rp) (Kenaikan BIT 10.3%)"]}${excelRow})/${colMap["Areal Produktif"]}${excelRow},0)*${colMap["Luas Bumi Areal Produktif (m²)"]}${excelRow},0)`, t: 'n', z: '#,##0' };
 
     // Formula: NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)
     ws1[`${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`] = { f: `${colMap["NJOP BUMI (Rp) AREAL BELUM PRODUKTIF pada A. DATA BUMI"]}${excelRow}*(1+'2. Kesimpulan'!$E$14)`, t: 'n', z: '#,##0' };
@@ -341,7 +341,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     const AJ = `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}`;
     const AN = `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}`;
     const AT = `${colMap["Jumlah NJOP BANGUNAN pada B. DATA BANGUNAN"]}${excelRow}`;
-    ws1[`${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}`] = { f: `(ROUND((${T}+${V})/${R},0)*${X})+${AB}+${AF}+${AJ}+${AN}+${AT}`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}`] = { f: `IFERROR((ROUND((${T}+${V})/${R},0)*${X})+${AB}+${AF}+${AJ}+${AN}+${AT},0)`, t: 'n', z: '#,##0' };
 
     // Formula: SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)
     ws1[`${colMap["SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}`] = { f: `((${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}-12000000)*40%)*0.5%`, t: 'n', z: '#,##0' };
@@ -350,7 +350,7 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     ws1[`${colMap["Kenaikan"]}${excelRow}`] = { f: `${colMap["SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}-${colMap["SPPT 2025"]}${excelRow}`, t: 'n', z: '#,##0' };
 
     // Formula: Persentase
-    ws1[`${colMap["Persentase"]}${excelRow}`] = { f: `${colMap["Kenaikan"]}${excelRow}/${colMap["SPPT 2025"]}${excelRow}`, t: 'n', z: '0.00%' };
+    ws1[`${colMap["Persentase"]}${excelRow}`] = { f: `IFERROR(${colMap["Kenaikan"]}${excelRow}/${colMap["SPPT 2025"]}${excelRow},0)`, t: 'n', z: '0.00%' };
 
     // Formula: SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Kenaikan BIT 10,3% + NDT 46%)
     const AA = `${colMap["NJOP BUMI (Rp) AREA PRODUKTIF pada A. DATA BUMI (Proyeksi NDT Naik 46%)"]}${excelRow}`;
