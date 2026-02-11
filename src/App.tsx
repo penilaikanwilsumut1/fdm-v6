@@ -140,7 +140,7 @@ async function extractDataFromFile(file: File): Promise<ExtractedData> {
         const fdmSheet = getSheetSmart(wb, "FDM Kebun ABC");
         if (fdmSheet) {
           const range = XLSX.utils.decode_range(fdmSheet['!ref'] || 'A1');
-          for (let row = 19; row < Math.min(150, range.e.r); row++) {
+          for (let row = 19; row < range.e.r; row++) {
             for (let col = 0; col < 5; col++) {
               const val = getCellValueRC(fdmSheet, row, col);
               if (val && typeof val === 'string' && val.toUpperCase().includes("NJOP BANGUNAN PER METER PERSEGI")) {
@@ -178,7 +178,7 @@ async function extractDataFromFile(file: File): Promise<ExtractedData> {
             let val: string | number | null = "TIDAK DITEMUKAN";
             const keyword = item.keyword.toLowerCase();
             const range = XLSX.utils.decode_range(ws['!ref'] || 'A1');
-            for (let row = 0; row < Math.min(150, range.e.r); row++) {
+            for (let row = 0; row < range.e.r; row++) {
               let found = false;
               for (let col = 0; col < 5; col++) {
                 const cellVal = getCellValueRC(ws, row, col);
