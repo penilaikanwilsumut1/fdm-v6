@@ -486,8 +486,8 @@ export default function App() {
   const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFiles = Array.from(e.target.files || []);
     if (selectedFiles.length === 0) return;
-    if (selectedFiles.length > 50) {
-      setError('Maksimal 50 file yang dapat diupload sekaligus');
+    if (selectedFiles.length > 500) {
+      setError('Maksimal 500 file yang dapat diupload sekaligus');
       return;
     }
     const invalidFiles = selectedFiles.filter(f => !f.name.endsWith('.xlsm') && !f.name.endsWith('.xlsx'));
@@ -641,7 +641,7 @@ export default function App() {
                     <p className="font-medium text-slate-900 font-body">Klik Di Sini untuk Upload File</p>
                     <p className="text-sm text-slate-500 font-body">Pastikan File berupa FDM V6 Sektor Perkebunan dalam Format xlsm</p>
                   </div>
-                  <p className="text-xs text-slate-400 font-body">Maksimal 50 file</p>
+                  <p className="text-xs text-slate-400 font-body">Maksimal 500 file</p>
                 </label>
               </div>
               {files.length > 0 && (
