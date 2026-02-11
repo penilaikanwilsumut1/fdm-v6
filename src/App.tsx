@@ -341,10 +341,10 @@ function generateOutputExcel(allData: ExtractedData[]): XLSX.WorkBook {
     const AJ = `${colMap["NJOP BUMI (Rp) AREAL PENGAMAN pada A. DATA BUMI"]}${excelRow}`;
     const AN = `${colMap["NJOP BUMI (Rp) AREAL EMPLASEMEN pada A. DATA BUMI"]}${excelRow}`;
     const AT = `${colMap["Jumlah NJOP BANGUNAN pada B. DATA BANGUNAN"]}${excelRow}`;
-    ws1[`${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}`] = { f: `IFERROR((ROUND((${T}+${V})/${R},0)*0),0)*${X})+${AB}+${AF}+${AJ}+${AN}+${AT}`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}`] = { f: `IFERROR((ROUND((${T}+${V})/${R},0)*${X})+${AB}+${AF}+${AJ}+${AN}+${AT},0)`, t: 'n', z: '#,##0' };
 
     // Formula: SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)
-    ws1[`${colMap["SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}`] = { f: `(IF(((${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}-12000000)*40%)*0.5%<0,0)`, t: 'n', z: '#,##0' };
+    ws1[`${colMap["SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}`] = { f: `IF((${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}-12000000)*40%*0.5%<0,0,(${colMap["SIMULASI TOTAL NJOP (TANAH + BANGUNAN) 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}-12000000)*40%*0.5%)`, t: 'n', z: '#,##0' };
 
     // Formula: Kenaikan
     ws1[`${colMap["Kenaikan"]}${excelRow}`] = { f: `${colMap["SIMULASI SPPT 2026 (Hanya Kenaikan BIT 10,3% + NDT Tetap)"]}${excelRow}-${colMap["SPPT 2025"]}${excelRow}`, t: 'n', z: '#,##0' };
